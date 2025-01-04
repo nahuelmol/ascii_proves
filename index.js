@@ -17,25 +17,18 @@ function draw() {
     let h = height / gloria.height;
     gloria.loadPixels();
     for (let i=0;i<gloria.width;i++) {
-	for (let j=0;j<gloria.height;j++) {
-	    const pixelIndex = (i + j * gloria.width) * 4;
-	    const r = gloria.pixels[pixelIndex + 0];
-	    const g = gloria.pixels[pixelIndex + 1];
-	    const b = gloria.pixels[pixelIndex + 2];
+        for (let j=0;j<gloria.height;j++) {
+            const pixelIndex = (i + j * gloria.width) * 4;
+            const r = gloria.pixels[pixelIndex + 0];
+            const g = gloria.pixels[pixelIndex + 1];
+            const b = gloria.pixels[pixelIndex + 2];
 
-	    let avg = (r+g+b)/3;
-	    noStroke();
-	    fill(r,g,b);
-	    //square(i * w, j * h, w);
-	    text('G', i+w, j+h);
-	}
+            let avg = (r+g+b)/3;
+            noStroke();
+            fill(r,g,b);
+            //square(i * w, j * h, w);
+            text('G', i+w, j+h);
+        }
     }
 }
-
-
-function start() {
-    console.log("hello world");
-}
-
-start()
 
